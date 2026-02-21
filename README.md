@@ -1,84 +1,117 @@
-```markdown
-# Schema Assist 🤖📊
+# 🤖 Schema Assist
 
-**Schema Assist** is an intelligent Data Dictionary Agent that bridges the gap between complex relational databases and natural language. It empowers business users, analysts, and data scientists to explore large datasets—like the Olist Brazilian E‑Commerce dataset—without writing SQL. By combining an LLM/NLP engine with an automatically maintained metadata layer, the agent translates plain‑English questions into executable queries and instantly renders interactive **Plotly** visualizations.
-
----
-
-## 🚀 Overview
-
-Data exploration is often gatekept by technical complexity. Business users struggle to interpret large relational databases without SQL or visualization expertise. Manual data dictionary maintenance is slow, creating a disconnect between raw data and actionable insights.
-
-**Schema Assist** turns static data into a conversational partner. Ask questions like *“Show me monthly order trends”* or *“What’s the average delivery time?”* and get real‑time answers with rich, interactive charts—all within a chat interface (Slack, web app, or Jupyter/Colab).
+> Conversational Data Dictionary Agent for Relational Databases  
+> Ask questions in plain English. Get SQL + interactive charts instantly.
 
 ---
 
-## ✨ Key Features
+## 📌 What is Schema Assist?
 
-- **Natural language querying** – No SQL required.
-- **Automated data dictionary** – Schema descriptions and relationships are maintained automatically.
-- **LLM‑powered intent understanding** – Uses Cohere Command + Embed models to parse user questions.
-- **Real‑time Plotly visualizations** – Bar charts, line charts, scatter plots, maps, heatmaps, and more.
-- **Multi‑turn conversations** – Drill down, filter, and explore through follow‑up questions.
-- **Metadata‑driven & scalable** – Designed to handle large datasets (e.g., 100k+ orders).
-- **Chat‑integrated** – Deployable in Slack, web apps, or interactive notebooks like Colab.
-- **Instant insights** – Summaries, trends, correlations, and geographic distributions on demand.
+Schema Assist transforms complex relational databases into a conversational analytics experience.
+
+Instead of writing SQL, users can ask:
+
+- “Show monthly order trends”
+- “What’s the average delivery time?”
+- “Top 5 cities by revenue?”
+
+The system interprets intent, generates queries, and returns interactive charts powered by Plotly.
 
 ---
 
-## 🧠 Architecture
+## 🎯 Why This Matters
 
+Business users often struggle with:
+- Writing SQL
+- Understanding schema relationships
+- Maintaining data dictionaries
+- Creating meaningful visualizations
+
+Schema Assist solves this by combining:
+- LLM-powered intent parsing  
+- Auto-maintained metadata layer  
+- Dynamic query generation  
+- Real-time visualization  
+
+---
+
+## ⚙️ How It Works
+
+```text
+User Query
+    ↓
+Intent Understanding (LLM)
+    ↓
+Metadata-Aware Query Generation
+    ↓
+Database Execution
+    ↓
+Interactive Plotly Visualization
 ```
-User Query → NLP Understanding → Data Retrieval → Plotly Generation → Chat Response
-```
-
-**Components:**
-1. **LLM/NLP Engine** – Interprets user intent (e.g., “Show me monthly order trends”) using Cohere models.
-2. **Metadata Layer** – Stores data dictionary with column descriptions, relationships, and sample values.
-3. **Query Generator** – Translates natural language into SQL or DataFrame queries.
-4. **Plotly Visualizer** – Creates interactive charts (bar, line, scatter, map, etc.).
-5. **Chat Interface** – Web app (React), Slack bot, or Jupyter/Colab widget.
 
 ---
 
-## 🛠️ Tech Stack
+## 🧠 Core Architecture
 
-| Layer       | Tools & Technologies |
-|-------------|----------------------|
-| **Frontend**| React, Plotly, Chart.js |
-| **Backend** | Python, FastAPI, PostgreSQL, SQLAlchemy |
-| **LLM**     | Cohere Command, Cohere Embed |
-| **Vector Store** | FAISS (Facebook AI Similarity Search) |
-| **Notebook**| Google Colab / Kaggle |
-| **Dataset** | [Brazilian E‑Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) |
+### 1️⃣ LLM/NLP Engine  
+Uses Cohere models for intent detection and embedding similarity.
 
----
+### 2️⃣ Metadata Layer  
+Auto-maintained schema descriptions, relationships, and sample values.
 
-## 📁 Dataset
+### 3️⃣ Query Generator  
+Translates natural language → SQL or Pandas queries.
 
-We use the **Olist Brazilian E‑Commerce** dataset, which contains:
-- ~100k orders from 2016–2018
-- Customers, sellers, products, reviews, geolocation, and payments
-- Multiple interconnected tables (orders, customers, products, etc.)
+### 4️⃣ Visualization Engine  
+Interactive charts using Plotly (line, bar, scatter, map, heatmap).
 
-The agent’s metadata layer captures all table schemas, relationships, and sample rows to enable accurate query generation.
+### 5️⃣ Interface Layer  
+Deployable via:
+- React Web App  
+- Slack Bot  
+- Jupyter / Colab  
 
 ---
 
-## 🔧 Setup & Run in Google Colab
+## 🛠 Tech Stack
 
-Follow these steps to try Schema Assist in Colab:
+| Layer | Technology |
+|-------|------------|
+| Backend | Python, FastAPI, SQLAlchemy |
+| Database | PostgreSQL |
+| LLM | Cohere Command + Embed |
+| Vector Search | FAISS |
+| Visualization | Plotly |
+| Frontend | React |
+| Notebook Support | Google Colab |
 
-### 1. Open a new Colab notebook
+---
 
-### 2. Install dependencies
+## 📊 Dataset Used
+
+**Brazilian E-Commerce Public Dataset by Olist**
+
+- ~100k orders (2016–2018)
+- Customers, sellers, products, payments, reviews
+- Multi-table relational structure
+
+Perfect for testing metadata-driven query generation.
+
+---
+
+## 🚀 Run in Google Colab
+
+### Install dependencies
+
 ```python
 !pip install langchain cohere plotly pandas sqlalchemy faiss-cpu
 ```
 
+---
+
 ### 3. Clone the repository (if available)
 ```python
-!git clone https://github.com/your-repo/Schema-Assist.git
+!git clone https://github.com/piyush080205/Schema-Assist.git
 %cd schema-assist
 ```
 
