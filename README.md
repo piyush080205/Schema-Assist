@@ -1,11 +1,11 @@
-# 🤖 Schema Assist
+#  Schema Assist
 
 > Conversational Data Dictionary Agent for Relational Databases  
 > Ask questions in plain English. Get SQL + interactive charts instantly.
 
 ---
 
-## 📌 What is Schema Assist?
+##  What is Schema Assist?
 
 Schema Assist transforms complex relational databases into a conversational analytics experience.
 
@@ -19,7 +19,7 @@ The system interprets intent, generates queries, and returns interactive charts 
 
 ---
 
-## 🎯 Why This Matters
+##  Why This Matters
 
 Business users often struggle with:
 - Writing SQL
@@ -35,7 +35,7 @@ Schema Assist solves this by combining:
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
 ```text
 User Query
@@ -51,29 +51,29 @@ Interactive Plotly Visualization
 
 ---
 
-## 🧠 Core Architecture
+##  Core Architecture
 
-### 1️⃣ LLM/NLP Engine  
+### 1️ LLM/NLP Engine  
 Uses Cohere models for intent detection and embedding similarity.
 
-### 2️⃣ Metadata Layer  
+### 2️ Metadata Layer  
 Auto-maintained schema descriptions, relationships, and sample values.
 
-### 3️⃣ Query Generator  
+### 3️ Query Generator  
 Translates natural language → SQL or Pandas queries.
 
-### 4️⃣ Visualization Engine  
+### 4️ Visualization Engine  
 Interactive charts using Plotly (line, bar, scatter, map, heatmap).
 
-### 5️⃣ Interface Layer  
+### 5️ Interface Layer  
 Deployable via:
 - React Web App  
 - Slack Bot  
-- Jupyter / Colab  
+- Colab  
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -87,7 +87,7 @@ Deployable via:
 
 ---
 
-## 📊 Dataset Used
+##  Dataset Used
 
 **Brazilian E-Commerce Public Dataset by Olist**
 
@@ -99,7 +99,7 @@ Perfect for testing metadata-driven query generation.
 
 ---
 
-## 🚀 Run in Google Colab
+##  Run in Google Colab
 
 ### Install dependencies
 
@@ -115,7 +115,7 @@ Perfect for testing metadata-driven query generation.
 %cd schema-assist
 ```
 
-## 💬 Usage Examples
+##  Usage Examples
 
 | User Query | Bot Response |
 |------------|--------------|
@@ -127,7 +127,7 @@ Perfect for testing metadata-driven query generation.
 
 ---
 
-## 🎯 Demo Scenario
+##  Demo Scenario
 
 1. **Ask**: “What’s in the dataset?” → Agent returns summary of tables and key columns.  
 2. **Follow‑up**: “Show me top 5 product categories by sales” → Bar chart of top categories.  
@@ -138,20 +138,20 @@ Perfect for testing metadata-driven query generation.
 ---
 
 
-## 👥 Team
+##  Team
 
 **Team Elite**  
 HackFest 2.0 – Round I
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 🙌 Acknowledgments
+##  Acknowledgments
 
 - [Olist](https://olist.com/) for the public Brazilian E‑Commerce dataset
 - [Cohere](https://cohere.com/) for the LLM and embedding APIs
