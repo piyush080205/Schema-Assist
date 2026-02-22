@@ -49,6 +49,9 @@ Database Execution
 Interactive Plotly Visualization
 ```
 
+<img width="1913" height="942" alt="Screenshot 2026-02-22 110221" src="https://github.com/user-attachments/assets/23f18ff3-d3bf-41df-b8b9-cf48699842df" />
+<img width="1915" height="947" alt="Screenshot 2026-02-22 110212" src="https://github.com/user-attachments/assets/ecd5d514-35aa-4e3b-b158-f68c936d4f3e" />
+
 ---
 
 ##  Core Architecture
